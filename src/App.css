@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.offer {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* for low resolution display */
+.tile-container {
+    height: 55vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
+    object-fit: contain;
+    background-image: url('images/background_scale_1x.jpeg');
+    background-size:cover;
+}
+
+/* for high resolution display */
+@media 
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+.tile-container {
+  background-image: url('images/background_scale_2x.jpeg');
+  background-size: cover;
+  }
+}
+
+
+.tile-container img {
+  width: 35%;
+  height: auto;
+  margin-bottom: 10px;
+
+}
+
+span {
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.count-down-expired {
+  background-image: none;
+  color: black;
+}
+
+button {
+  background-color: #4CAF50;/* Green */
+  border: none;
+  color: black;
+  padding: 12px 65px;
+  text-align: center;
+  text-decoration:none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 15px 2px;
+  cursor: pointer;
+}
+
+.blinkingText {
+  color: white;
+  animation: blink 1s linear infinite;
+  margin: 15px 2px;
+  font-size: 25px;
+
+}
+
+@keyframes blink {
+  from {
+      opacity: 1;
+      color :yellow;
+      }
+  to {
+      opacity: 0;
+      color : white;
+      }
+  0% {
+      opacity: 0;
+  }
+  50% {
+      opacity: .5;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@media  screen and (max-width: 768px) {
+
+.tile-container img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+  
+  }
+
+.blinkingText {
+  font-size: 10px;
+}
+
+.tile-count-down {
+  font-size: 12px;
+}
+
+span {
+  margin-right: 15px;
+  font-size: 10px;
+}
+
+.count-down-expired {
+  font-size: 12px;
+}
+
+button {
+  background-color: #4CAF50;/* Green */
+  border: none;
+  color: black;
+  padding: 5px 50px;
+  text-align: center;
+  text-decoration:none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+}
+

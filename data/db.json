@@ -1,0 +1,15 @@
+{
+    "offers": [
+        {
+            "duration": 
+            { 
+                "hours": 1,
+                "minutes": 25,
+                "seconds": 12 
+            },
+            "cash_value": 10,
+            "link": "/www.jackpotjoy.com",
+            "id": 1
+        }
+    ]
+}
